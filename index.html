@@ -518,13 +518,13 @@
                 // Show the joysticks only in mobile devices
                 if (!this.sys.game.device.os.desktop) {
                     joyStick = this.plugins.get('rexvirtualjoystickplugin').add(this, {
-                        x: 80, y: map.heightInPixels - 100, radius: 20,
+                        x: 80, y: gameWorld.height / 2, radius: 20,
                         base: this.add.circle(0, 0, 20, 0x888888).setAlpha(0.8).setDepth(4),
                         thumb: this.add.circle(0, 0, 20, 0xcccccc).setAlpha(0.5).setDepth(4)
                     }).on('update', this.update, this);
 
                     joyStick2 = this.plugins.get('rexvirtualjoystickplugin').add(this, {
-                        x: map.widthInPixels - 80, y: map.heightInPixels - 100, radius: 20,
+                        x: map.widthInPixels - 80, y: gameWorld.height / 2, radius: 20,
                         base: this.add.circle(0, 0, 20, 0x888888).setAlpha(0.8).setDepth(4),
                         thumb: this.add.circle(0, 0, 20, 0xcccccc).setAlpha(0.5).setDepth(4)
                     }).on('update', this.update, this);
